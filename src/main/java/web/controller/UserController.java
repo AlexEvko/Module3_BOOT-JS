@@ -6,16 +6,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import web.model.User;
 
-//@Controller
-//@RequestMapping("/user")
-//public class UserController {
-//
-//    @GetMapping
-//    public String userInfo(@AuthenticationPrincipal User user, Model model) {
-//        model.addAttribute("user", user);
-//        return "user";
-//    }
-//}
 @Controller
 public class UserController {
 
