@@ -78,7 +78,6 @@ $(document).on('click', '.edit-btn', function () {
             $('#editName').val(user.username);
             $('#editLastName').val(user.lastName);
             $('#editAge').val(user.age);
-            $('#editEmail').val(user.email);
             $('#editPassword').val(user.password);
             $('#editRole').empty();
             //для получения ролей в мадольном окне проходимся по массиву ролей, выделяем текущею роль у юзера
@@ -144,7 +143,6 @@ $(document).on('click', '.del-btn', function () {
             $('#delName').empty().val(user.username);
             $('#delLastName').empty().val(user.lastName);
             $('#delAge').empty().val(user.age);
-            $('#delEmail').empty().val(user.email);
             $('#delPassword').empty().val(user.password);
             $('#delRole').empty();
             //для получения ролей в мадольном окне проходимся по массиву ролей, выделяем текущею роль у юзера
@@ -196,7 +194,6 @@ $('.newUser').on('click', () => {
     $('#name').empty().val('')
     $('#lastName').empty().val('')
     $('#age').empty().val('')
-    $('#email').empty().val('')
     $('#password').empty().val('')
     $('#addRole').empty().val('')
     roleList.map(role => {
@@ -214,7 +211,6 @@ $("#addNewUserButton").on('click', () => {
         username: $('#name').val(),
         lastName: $('#lastName').val(),
         age: $('#age').val(),
-        email: $('#email').val(),
         password: $('#password').val(),
         roles: getUserRolesForAdd()
     }
