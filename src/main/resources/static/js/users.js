@@ -160,6 +160,7 @@ $('#deleteButton').on('click', (e) => {
     $.ajax({
         url: '/admin/' + userId,
         method: 'DELETE',
+        withCredentials: true,
         success: function () {
             $('#' + userId).remove(); // удаляет юзера по айди
             $('#deleteModal').modal('hide'); // hide - скрывает модальное окно
