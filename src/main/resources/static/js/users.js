@@ -32,7 +32,6 @@ function createRows(user) {
     user_data += '<td>' + user.username + '</td>';
     user_data += '<td>' + user.lastName + '</td>';
     user_data += '<td>' + user.age + '</td>';
-    user_data += '<td>' + user.email + '</td>';
     user_data += '<td>';
     let roles = user.authorities; // через getJSON получаем массив ролей
     for (let role of roles) {
@@ -102,7 +101,6 @@ $('#editButton').on('click', (e) => {
         username: $("input[name='username']").val(),
         lastName: $("input[name='lastName']").val(),
         age: $("input[name='age']").val(),
-        email: $("input[name='email']").val(),
         password: $("input[name='password']").val(),
         roles: getUserRolesForEdit()
 
