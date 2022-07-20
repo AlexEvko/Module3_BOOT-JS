@@ -31,8 +31,8 @@ public class UserController {
     @GetMapping(value = "/admin")
     public String listUsers(@AuthenticationPrincipal User user, Model model) {
         model.addAttribute("user", user);
-        model.addAttribute("allUsers", userService.findAll());
-        model.addAttribute("allRoles", roleService.findAll());
+        model.addAttribute("allUsers", userService.getAllUsers());
+        model.addAttribute("allRoles", roleService.getAllRoles());
         return "admin-page";
     }
 }

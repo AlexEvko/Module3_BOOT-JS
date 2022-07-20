@@ -5,16 +5,17 @@ import web.model.User;
 import java.util.List;
 
 public interface UserService {
-    public void save(User user);
+    void addUser(User user);
 
-    public User findById(Long id);
+    void updateUser(User user);
 
-    public User findByName(String name);
+    void deleteUserById(long id);
 
-    public List<User> findAll();
+    User getUserById(long id);
 
-    public void deleteById(Long id);
+    List<User> getAllUsers();
 
-    public void update(User user);
+    User getUserByUsername(String username);
 
+    boolean existsUserById(long id);
 }
